@@ -171,10 +171,12 @@ endif
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-" F9 = 打开NERDTree窗口
+" Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+" 打开/关闭NERDTree窗口
 nnoremap <F2> :NERDTreeToggle<CR>
 inoremap <F2> <ESC>:NERDTreeToggle<CR>
-" F10 = 定位当前活动缓冲区
+" 定位当前活动缓冲区
 nnoremap <F3> :NERDTreeFind<CR>
 inoremap <F3> <ESC>:NERDTreeFind<CR>
 " 右边显示
@@ -297,10 +299,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-inoremap <C-h> <ESC><C-w>h
-inoremap <C-j> <ESC><C-w>j
-inoremap <C-k> <ESC><C-w>k
-inoremap <C-l> <ESC><C-w>l
+" inoremap <C-h> <ESC><C-w>h
+" inoremap <C-j> <ESC><C-w>j
+" inoremap <C-k> <ESC><C-w>k
+" inoremap <C-l> <ESC><C-w>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
