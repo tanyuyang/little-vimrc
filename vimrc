@@ -78,6 +78,8 @@ set tags=./tags;,tags
 " Plug 'mhinz/vim-startify'
 " Plug 'easymotion/vim-easymotion'
 " Plug 'preservim/nerdtree'
+" Use release branch (recommend)
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 " 设置插件更新后的钩子
 " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -311,10 +313,8 @@ nnoremap <C-l> <C-w>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 底行模式下，输入%%时自动展开为当前活动缓冲区的路径
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 在插入模式下，按jj相当于esc
 inoremap jj <esc>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 禁用箭头键
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
@@ -324,7 +324,6 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 快速分割窗口
 nnoremap <silent><leader>s :sp<CR>
 nnoremap <silent><leader>v :vsp<CR>
