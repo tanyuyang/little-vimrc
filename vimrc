@@ -109,11 +109,11 @@ if has("cscope")
 endif
 
 " 查找C语言符号，即函数名、宏、枚举值等
-nnoremap <F5> :cs f s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <F2> :cs f s <C-R>=expand("<cword>")<CR><CR>
 " 查找指定的字符串
-nnoremap <F6> :cs f t <C-R>=expand("<cword>")<CR><CR>
+nnoremap <F3> :cs f t <C-R>=expand("<cword>")<CR><CR>
 " 查找调用本函数的函数
-nnoremap <F7> :cs f c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <F4> :cs f c <C-R>=expand("<cword>")<CR><CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -171,29 +171,29 @@ endif
 " NERDTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 " 打开/关闭NERDTree窗口
-nnoremap <F2> :NERDTreeToggle<CR>
-inoremap <F2> <ESC>:NERDTreeToggle<CR>
+" nnoremap <F5> :NERDTreeToggle<CR>
+" inoremap <F5> <ESC>:NERDTreeToggle<CR>
 " 定位当前活动缓冲区
-nnoremap <F3> :NERDTreeFind<CR>
-inoremap <F3> <ESC>:NERDTreeFind<CR>
+" nnoremap <F6> :NERDTreeFind<CR>
+" inoremap <F6> <ESC>:NERDTreeFind<CR>
 " 右边显示
 " let g:NERDTreeWinPos='right'
 " 忽略以下文件的显示
-let g:NERDTreeIgnore=['\.swp','\.o','\.bin','\.img']
+" let g:NERDTreeIgnore=['\.swp','\.o','\.bin','\.img']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " open terminal quickly
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F4> :terminal<CR>
-inoremap <F4> <ESC>:terminal<CR>
+" nnoremap <F4> :terminal<CR>
+" inoremap <F4> <ESC>:terminal<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -298,10 +298,15 @@ set tabline=%!Vim_NeatTabLine()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 快速切换窗口
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap wh <C-w>h
+nnoremap wj <C-w>j
+nnoremap wk <C-w>k
+nnoremap wl <C-w>l
+" Ctrl键在一些远程连接软件中工作会有问题，比mobaxterm
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 " inoremap <C-h> <ESC><C-w>h
 " inoremap <C-j> <ESC><C-w>j
 " inoremap <C-k> <ESC><C-w>k
