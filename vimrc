@@ -55,6 +55,8 @@ set nobackup
 set noswapfile
 " 在命令行模式中使用tab键补全时列出所有的可选项
 set wildmode=longest,list
+" 在光标下显示横线，有主题，显示效果可能会变化，比如变成高亮显示当前行
+set cursorline
 
 " 使用配色方案
 colorscheme molokai
