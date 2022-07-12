@@ -206,19 +206,17 @@ endif
 " <leader>b	默认占用，搜索当前buffer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 打开MRU列表
-nnoremap <silent><leader>e :LeaderfMru<CR>
-" 打开函数列表
-nnoremap <silent><leader>c :LeaderfFunction!<CR>
+nnoremap <silent><leader>r :LeaderfMru<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 快速切换标签页
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent><tab>m :tabnew<CR>
-nnoremap <silent><tab>u :tabclose<CR>
 nnoremap <silent><tab>n :tabn<CR>
 nnoremap <silent><tab>p :tabp<CR>
+nnoremap <silent><leader>t :tabnew<CR>
+nnoremap <silent><leader>c :tabclose<CR>
 nnoremap <silent><leader>1 :tabn 1<CR>
 nnoremap <silent><leader>2 :tabn 2<CR>
 nnoremap <silent><leader>3 :tabn 3<CR>
@@ -300,20 +298,14 @@ set tabline=%!Vim_NeatTabLine()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 快速切换窗口
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 下面的映射用到了w键，不是很好，用于ctrl键使用有问题的情况下
-nnoremap wh <C-w>h
-nnoremap wj <C-w>j
-nnoremap wk <C-w>k
-nnoremap wl <C-w>l
-" Ctrl键在一些远程连接软件中工作会有问题，比mobaxterm
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
-" inoremap <C-h> <ESC><C-w>h
-" inoremap <C-j> <ESC><C-w>j
-" inoremap <C-k> <ESC><C-w>k
-" inoremap <C-l> <ESC><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+inoremap <C-h> <ESC><C-w>h
+inoremap <C-j> <ESC><C-w>j
+inoremap <C-k> <ESC><C-w>k
+inoremap <C-l> <ESC><C-w>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -336,9 +328,6 @@ inoremap <Right> <NOP>
 " 快速分割窗口
 nnoremap <silent><leader>s :sp<CR>
 nnoremap <silent><leader>v :vsp<CR>
-" 快速保存和退出
-nnoremap <silent><leader>w :w<CR>
-nnoremap <silent><leader>q :q<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
